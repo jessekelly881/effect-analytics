@@ -3,7 +3,7 @@ An Effect library for working with Analytics. Wraps the @analytics/* pluggable a
 
 ```ts
 import { Effect } from "effect";
-import { AnalyticsInstance, Analytics as Instance } from "analytics";
+import { Analytics as Instance } from "analytics";
 import * as A from "effect-analytics"
 
 const instance = Instance({
@@ -14,6 +14,6 @@ const instance = Instance({
 const program = pipe(
   Effect.sync(() => ({ data: 1 })),
   Effect.tap(x => A.track("test", x)), // sends { data: 1 } w/ tag "test" to configured providers.
-  Effect.provideService(Analytics, instance)
+  Effect.provideService(A.Analytics, instance)
 );
 ```

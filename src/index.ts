@@ -11,7 +11,7 @@ export interface Analytics extends AnalyticsInstance {}
 /**
  * @since 1.0.0
  */
-export const Analytics = Context.Tag<Analytics>();
+export const Analytics = Context.Tag<Analytics>("effect-analytics/Analytics");
 
 /**
  * @since 1.0.0
