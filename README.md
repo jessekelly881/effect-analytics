@@ -5,10 +5,15 @@ An Effect library for working with Analytics. Wraps the @analytics/* pluggable a
 import { Effect } from "effect";
 import { Analytics as Instance } from "analytics";
 import * as A from "effect-analytics"
+// import googleAnalytics from '@analytics/google-analytics'
 
 const instance = Instance({
   app: "app",
-  plugins: [],
+  plugins: [/*
+    googleAnalytics({
+        trackingId: 'UA-121991291',
+      })
+  */],
 });
 
 const program = pipe(
